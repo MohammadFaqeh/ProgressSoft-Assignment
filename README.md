@@ -45,9 +45,9 @@ I demonstrated the ability to transfer files from a Windows Host to the Linux Gu
 **Transfer Confirmation (100%):**
 **Transfer Confirmation (100%):**
 
-![File Transfer on Linux](Screenshots/File_Transfer on linux.jpg)
+![File Transfer on Linux](Screenshots/linux.jpg)
 
-![File Transfer Command on Windows](Screenshots/File_Transfer_Command on Windows.jpg)
+![File Transfer Command on Windows](Screenshots/Windows.jpg)
 ---
 
 ### 5. Linux Knowledge Base (Task 7)
