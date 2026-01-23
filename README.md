@@ -43,8 +43,11 @@ I demonstrated the ability to transfer files from a Windows Host to the Linux Gu
 * **Result:** The file `task6.txt` was successfully moved to the `/home/mohammad/` directory.
 
 **Transfer Confirmation (100%):**
+**Transfer Confirmation (100%):**
+
 ![File Transfer on Linux](Screenshots/File_Transfer_on_linux.jpg)
-![File Transfer Command Windows](Screenshots/File_Transfer_Command_on_Windows.jpg)
+
+![File Transfer Command on Windows](Screenshots/File_Transfer_Command_on_Windows.jpg)
 ---
 
 ### 5. Linux Knowledge Base (Task 7)
