@@ -6,7 +6,7 @@
 I developed a comprehensive Bash script to automate system monitoring. The script extracts real-time data about the server's health and network configuration.
 
 * **Key Features:** Displays Hostname, Server IP, Public IP, OS version, Kernel info, and Resource Usage (Memory/CPU).
-* **Source Code:** [Script](./sys_info.sh)
+* **Source Code:** [Source Code](./Script/sys_info.sh)
 
 **Execution Output:**
 ![System Info Output](Screenshots/output_script.jpg)
