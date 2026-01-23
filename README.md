@@ -9,7 +9,7 @@ I developed a comprehensive Bash script to automate system monitoring. The scrip
 * **Source Code:** [Script](./sys_info.sh)
 
 **Execution Output:**
-![System Info Output](Screenshots/output_scripts.jpg)
+![System Info Output](Screenshots/output_script.jpg)
 
 ---
 
@@ -43,8 +43,8 @@ I demonstrated the ability to transfer files from a Windows Host to the Linux Gu
 * **Result:** The file `task6.txt` was successfully moved to the `/home/mohammad/` directory.
 
 **Transfer Confirmation (100%):**
-![File Transfer Success1](Screenshots/File_Transfer_Command on Windows.jpg)
-![File Transfer Success1](Screenshots/File_Transfer_on Linux.jpg)
+![File Transfer on Linux](Screenshots/File_Transfer_on_linux.jpg)
+![File Transfer Command Windows](Screenshots/File_Transfer_Command_on_Windows.jpg)
 ---
 
 ### 5. Linux Knowledge Base (Task 7)
