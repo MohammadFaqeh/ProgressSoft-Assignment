@@ -9,7 +9,7 @@ I developed a comprehensive Bash script to automate system monitoring. The scrip
 * **Source Code:** [sys_info.sh](./sys_info.sh)
 
 **Execution Output:**
-![System Info Output](Screenshots/output_scripts.png)
+![System Info Output](Screenshots/output_scripts.jpg)
 
 ---
 
@@ -22,18 +22,18 @@ To ensure a secure multi-user environment, I performed the following:
 **Verification (Users & Groups):**
 **User Creation Proof:**
 ![Create User Proof](Screenshots/Create_User.jpg)
-![Users Proof](Screenshots/Root_Password.png)
+![Users Proof](Screenshots/Root_Password.jpg)
 ---
 
 ### 3. Software Installation & Firewall (Task 5)
 I prepared the server for database hosting and load balancing by installing `mysql-server` and `haproxy`. 
-![Install_Services](Screenshots/Install_mySql.png)
-![Install_Services](Screenshots/Install_haproxy.png)
+![Install_Services](Screenshots/Install_mySql.jpg)
+![Install_Services](Screenshots/Install_haproxy.jpg)
 **Network Security:**
 The firewall (UFW) was configured to strictly allow traffic on port **3306** (TCP/UDP) as per the assignment requirements.
 * `sudo ufw allow 3306`
 
-![Firewall](Screenshots/Firewall_Config.png)
+![Firewall](Screenshots/Firewall_Config.jpg)
 ---
 
 ### 4. Secure File Transfer (Task 6)
@@ -43,8 +43,8 @@ I demonstrated the ability to transfer files from a Windows Host to the Linux Gu
 * **Result:** The file `task6.txt` was successfully moved to the `/home/mohammad/` directory.
 
 **Transfer Confirmation (100%):**
-![File Transfer Success1](Screenshots/File_Transfer_Command on Windows.png)
-![File Transfer Success1](Screenshots/File_Transfer_on Linux.png)
+![File Transfer Success1](Screenshots/File_Transfer_Command on Windows.jpg)
+![File Transfer Success1](Screenshots/File_Transfer_on Linux.jpg)
 ---
 
 ### 5. Linux Knowledge Base (Task 7)
