@@ -20,7 +20,8 @@ To ensure a secure multi-user environment, I performed the following:
 * Secured the `root` account with a strong password policy.
 
 **Verification (Users & Groups):**
-![Users Proof](Screenshots/Creat_User.png)
+**User Creation Proof:**
+![Create User Proof](Screenshots/Create_User.jpg)
 ![Users Proof](Screenshots/Root_Password.png)
 ---
 
