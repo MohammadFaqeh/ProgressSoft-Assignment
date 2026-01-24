@@ -76,7 +76,7 @@ The methodology adopted for the database design centered on achieving a high lev
 
 ![File Transfer on Linux](Screenshots/Tables.PNG)
 
-`describe TableName;`
+`describe (TableName);`
 
 
 ![File Transfer on Linux](Screenshots/MyEmployee.PNG)
