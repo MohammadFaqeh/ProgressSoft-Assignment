@@ -71,7 +71,7 @@ The methodology for transferring data between the Windows host and the Linux env
 ## 2. SQL & Relational Databases
 ### Database Schema Design Methodology (Q1)
 
-To automate the environment setup, a comprehensive script named `Complete_Solution.sql` has been provided. This script sequentially handles database creation, schema definition, data population, and the generation of the final analytical report. It can be executed via the Linux terminal using the following command: `mysql -u root -p < Complete_Solution.sql`
+To automate the environment setup, a comprehensive script named `solution.sql` has been provided. This script sequentially handles database creation, schema definition, data population, and the generation of the final analytical report. It can be executed via the Linux terminal using the following command: `mysql -u root -p < solution.sql`
 
 * **Source Code:** [solution.sql](./Script/solution.sql)
 
