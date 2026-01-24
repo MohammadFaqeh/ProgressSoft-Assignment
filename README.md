@@ -15,7 +15,7 @@ This project focuses on the implementation and management of essential IT tools 
 - Architecture: x86_64.
 - Hardware Allocation: 2GB RAM and 1 CPU Core.
 
- # Project Sections:
+ ## Project Sections:
  ## 1. Linux Administration
 ### System Information Script (Task 1)
 The implementation phase began with the establishment of a centralized system monitoring framework. To achieve this, a modular Bash script was developed to automate the extraction of critical system metrics. The methodology focused on capturing real-time data including hostname configurations, network addressing (both internal and public IPs), and OS architecture details. This approach ensures that any system administrator can perform an immediate health check of the server with a single command, streamlining the diagnostic process and reducing human error in resource tracking.
