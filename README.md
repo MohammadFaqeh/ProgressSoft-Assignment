@@ -33,7 +33,6 @@ Following the initial setup, the methodology shifted toward securing the environ
 **Verification (Users & Groups):**
 ![Create User Proof](Screenshots/Create_User.jpg)
 
-**:**
 
 ![Users Proof](Screenshots/Root_Password.jpg)
 ---
@@ -41,9 +40,9 @@ Following the initial setup, the methodology shifted toward securing the environ
 ### Service Installation & Network Security (Task 4 & 5)
 The next stage of the deployment focused on preparing the server for production-ready services. This involved the orchestrated installation of `mysql-server` for data management and `haproxy` for load balancing capabilities. To protect these services, a "Deny-by-Default" firewall policy was implemented using UFW. The methodology here was to minimize the server's attack surface by explicitly filtering all traffic and only permitting ingress communication on port `3306`, ensuring that database services are accessible only through secured and intended channels.
 To install the required database engine and load balancer, the following commands were executed:
-`sudo apt update`
-`sudo apt install mysql-server -y`
-`sudo apt install haproxy -y`
+* `sudo apt update` 
+*  `sudo apt install mysql-server -y`  
+* `sudo apt install haproxy -y`
 
 ![Install_Services](Screenshots/Install_mySql.jpg)
 ![Install_Services](Screenshots/Install_haproxy.jpg)
@@ -51,7 +50,7 @@ To install the required database engine and load balancer, the following command
 **Network Security:**
 The firewall (UFW) was configured to strictly allow traffic on port **3306** (TCP/UDP) as per the assignment requirements.
 * `sudo ufw allow 3306/tcp`
-* * `sudo ufw allow 3306/udp`
+* `sudo ufw allow 3306/udp`
 
 ![Firewall](Screenshots/Firewall_Config.jpg)
 ---
