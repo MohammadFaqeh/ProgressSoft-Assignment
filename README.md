@@ -23,7 +23,6 @@ The implementation phase began with the establishment of a centralized system mo
 
 **Execution Output:**
 ![System Info Output](Screenshots/output_script.jpg)
-
 ---
 
 ### User and Access Management (Tasks 2 & 3 )
