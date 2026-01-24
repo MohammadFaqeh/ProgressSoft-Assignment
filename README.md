@@ -1,5 +1,5 @@
 # ProgressSoft Internship Assignment
-##Introduction
+## Introduction
 This project focuses on the implementation and management of essential IT tools and technologies required for modern application deployment. The goal is to demonstrate a foundational understanding and practical experience in the following areas:
 - Operating Systems: Linux administration and shell scripting.
 - Databases: Relational database management using SQL and PL/SQL.
@@ -7,7 +7,7 @@ This project focuses on the implementation and management of essential IT tools 
 - Modern Infrastructure: Containerization with Docker and orchestration with Kubernetes.
 - Automation: Infrastructure as Code (IaC) using Vagrant and provisioning scripts.
 
-##Environment Setup
+## Environment Setup
  To ensure a consistent and isolated testing environment, the following setup was utilized:
 - Virtualization: Oracle VM VirtualBox / VMware.
 - Operating System: Ubuntu 22.04.3 LTS .
