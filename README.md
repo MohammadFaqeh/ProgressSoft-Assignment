@@ -60,8 +60,7 @@ The firewall (UFW) was configured to strictly allow traffic on port **3306** (TC
 
 ### File Transfer Protocols (Task 6)
 The methodology for transferring data between the Windows host and the Linux environment was designed with a "Security-First" approach. To facilitate the transfer, a temporary communication channel was established using NAT-based `Port Forwarding` (mapping host port 2222 to guest port 22). The firewall policy was temporarily modified to permit SSH traffic on port 22 to allow the `scp` operation. Once the file `task6.txt` was successfully synchronized and verified in the guest's home directory, the port 22 access was immediately revoked using a deny rule to eliminate any potential security vulnerabilities. This practice of dynamic port management demonstrates a commitment to maintaining a minimal attack surface throughout the administrative workflow.
-**Transfer Confirmation (100%):**
-**Transfer Confirmation (100%):**
+
 
 ![File Transfer on Linux](Screenshots/linux.jpg)
 
