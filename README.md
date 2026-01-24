@@ -90,4 +90,4 @@ The methodology adopted for the database design centered on achieving a high lev
 
 ---
 
-### Data Retrieval & Reporting Methodology (Q2) 
+### Data Retrieval (Q2) 
