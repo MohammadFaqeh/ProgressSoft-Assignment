@@ -63,3 +63,6 @@ The methodology for transferring data between the Windows host and the Linux env
 ![File Transfer on Linux](Screenshots/linux.jpg)
 
 ![File Transfer Command on Windows](Screenshots/Windows.jpg)
+
+---
+## 2. SQL & Relational Databases
