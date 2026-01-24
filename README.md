@@ -69,3 +69,16 @@ The methodology for transferring data between the Windows host and the Linux env
 ---
 
 ## 2. SQL & Relational Databases
+### Database Schema Design Methodology (Q1)
+The methodology adopted for the database design centered on achieving a high level of Data Normalization while maintaining strict Referential Integrity. To minimize data redundancy, the architecture was decomposed into four interconnected entities: `MyEmployee, MyDepartment, University, and Gender`. The design process involved careful selection of data types to ensure system precision; for instance, the `SALARY` field utilizes `DECIMAL(10, 2)` for financial accuracy, while the `EMP_IMAGE` field was implemented using the `BLOB` (Binary Large Object) type to allow the direct storage of employee portraits as binary data within the database. A unique aspect of this methodology is the implementation of a `Self-Referencing Relationship` via the `MANAGER_USERID` column. This design choice allows the system to represent the organizational hierarchy within a single table by linking an employee’s record to their manager’s `USERID`, thereby ensuring that the reporting structure is maintained through a robust foreign key constraint.
+`show tables;`
+![File Transfer on Linux](Screenshots/Tables.PNG)
+`describe TableName;`
+
+![File Transfer on Linux](Screenshots/MyEmployee.PNG)
+![File Transfer on Linux](Screenshots/Gender.PNG)
+![File Transfer on Linux](Screenshots/DepartmentUniversity.PNG)
+
+---
+
+### Data Retrieval & Reporting Methodology (Q2) 
