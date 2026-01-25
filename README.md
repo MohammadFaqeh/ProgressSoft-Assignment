@@ -115,6 +115,7 @@ The final step involved implementing a query to calculate the total monthly payr
 ![File Transfer on Linux](Screenshots/select.PNG)
 
 ![File Transfer on Linux](Screenshots/jobname.PNG)
+
 ---
 
 ### SQL Syntax Debugging & Error Identification (Q4)
@@ -126,7 +127,6 @@ The final step involved implementing a query to calculate the total monthly payr
 4. Quotation Marks for Alias: The alias ANNUAL SALARY should be enclosed in `double quotes (")` since it contains a space.
 
 * Corrected Query:
-  
 `SELECT empno, ename, salary * 12 AS "ANNUAL SALARY" FROM emp;`
 ---
 
