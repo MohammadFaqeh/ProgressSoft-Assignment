@@ -69,6 +69,16 @@ The methodology for transferring data between the Windows host and the Linux env
 ---
 
 ## 2. SQL & Relational Databases
+### Database Access & Initial Setup
+Before executing the schema scripts, I accessed the MySQL environment and prepared the workspace using the following commands:
+
+* Accessing the MySQL CLI: Used the terminal to log in as the root user.
+`sudo mysql -u root -p`
+* Creating the Project Database: Initialized a dedicated schema for the assignment.
+  `CREATE DATABASE progressSoft_ DB;`
+* Selecting the Database: Switched the context to the newly created database.
+  `USE progressSoft_ DB;`
+
 ### Database Schema Design Methodology (Q1)
 
 To automate the environment setup, a comprehensive script named `solution.sql` has been provided. This script sequentially handles database creation, schema definition, data population, and the generation of the final analytical report. It can be executed via the Linux terminal using the following command: `mysql -u root -p < solution.sql`
