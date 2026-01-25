@@ -115,7 +115,6 @@ The final step involved implementing a query to calculate the total monthly payr
 ![File Transfer on Linux](Screenshots/select.PNG)
 
 ![File Transfer on Linux](Screenshots/jobname.PNG)
-
 ---
 
 ### SQL Syntax Debugging & Error Identification (Q4)
@@ -129,7 +128,6 @@ The final step involved implementing a query to calculate the total monthly payr
 * Corrected Query:
   
 `SELECT empno, ename, salary * 12 AS "ANNUAL SALARY" FROM emp;`
-
 ---
 
 ### Procedural Logic and Function Implementation (Q5)
