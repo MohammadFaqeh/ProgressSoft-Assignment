@@ -103,7 +103,7 @@ The methodology adopted for the database design centered on achieving a high lev
 
 ---
 
-### Data Retrieval (Q2) 
+### Relational Data Retrieval and Hierarchical Mapping (Q2) 
 The primary goal of this phase was to transform the normalized database into a readable report that fulfills the assignment requirements. To achieve this, I followed a structured query approach centered on the use of Table Joins. I utilized `INNER JOINs` to link the main `MyEmployee` table with the `MyDepartment, Gender, and University tables`, ensuring that each record correctly pulls the descriptive names instead of just the ID numbers.
 
 For the organizational hierarchy, I implemented a `Self-Join` by linking the table to itself via the `MANAGER_USERID` field. In this step, I specifically chose a `LEFT JOIN` to ensure data completeness; this allows the report to include all employees, even those at the top of the hierarchy who do not have a supervisor. To improve the final output's presentation, I used the `CONCAT()` function to combine first and last names into a single column. Finally, I applied Table Aliasing (using e, m, d, etc.) to keep the SQL code organized and avoid any errors related to duplicate column names.
