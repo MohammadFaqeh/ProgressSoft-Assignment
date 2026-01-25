@@ -115,3 +115,21 @@ The final step involved implementing a query to calculate the total monthly payr
 ![File Transfer on Linux](Screenshots/select.PNG)
 
 ![File Transfer on Linux](Screenshots/jobname.PNG)
+
+---
+
+### SQL Syntax Debugging & Error Identification (Q4)
+
+* Identified Errors: 
+1. Missing Multiplication Operator (*): The multiplication operator `x` should be replaced with `*` for correct syntax.
+2. Missing AS for Alias: The alias ANNUAL SALARY needs to be preceded by the `AS` keyword to define the column properly.
+3. Incorrect Semicolon Placement: A semicolon `;` was placed before the `FROM` keyword, which is incorrect. It should only appear at the end of the query.
+4. Quotation Marks for Alias: The alias ANNUAL SALARY should be enclosed in `double quotes (")` since it contains a space.
+
+* Corrected Query:
+  
+`SELECT empno, ename, salary * 12 AS "ANNUAL SALARY" FROM emp;`
+
+---
+
+### Procedural Logic and Function Implementation (Q5)
