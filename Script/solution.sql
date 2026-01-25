@@ -13,17 +13,6 @@ CREATE TABLE MyEmployee (  ID_Number INT PRIMARY KEY,  USERID INT UNIQUE NOT NUL
     FOREIGN KEY (University_ID) REFERENCES University(ID)
     FOREIGN KEY (Job_ID) REFERENCES JobTitles(Job_ID));
 
-SELECT 
-    CONCAT(e.FIRST_NAME, '  ', e.LAST_NAME) AS "Employee Name", 
-    e.SALARY AS "Salary", d.DeptName AS "Department Name", 
-    CONCAT(m.FIRST_NAME, ' ', m.LAST_NAME) AS "Manager", 
-    g.GenderName AS "Gender Name",   u.UnivName AS "Employee University"
-FROM MyEmployee e 
-INNER JOIN MyDepartment d ON e.DEPT_ID = d.Dept_ID 
-INNER JOIN Gender g ON e.Gender_ID = g.Gender_ID 
-INNER JOIN University u ON e.University_ID = u.ID 
-LEFT JOIN MyEmployee m ON e.MANAGER_USERID = m.USERID;
-
 INSERT INTO Gender  VALUES (1, 'Male'), (2, 'Female');
 INSERT INTO University  VALUES (1, 'JU'), (2, 'JUST'), (3, ' PSUT');
 INSERT INTO MyDepartment VALUES (1, 'Software Development'), (2, 'Human Resources');
@@ -38,6 +27,16 @@ INSERT INTO MyEmployee VALUES (1002, 'Ahmad', 'Omar',501 ,'1980-10-10', 2500, 1,
 INSERT INTO MyEmployee VALUES (1003, 'Rami', 'Sami',502 ,'1986-05-24',2200, 2, 1,3 ,NULL , 500 ,2);
 INSERT INTO MyEmployee VALUES (1004, 'Zaid', 'Hassan',503 ,'2024-01-01',1800, 1, 1,2 ,NULL , 500 ,2);
 
+SELECT 
+    CONCAT(e.FIRST_NAME, '  ', e.LAST_NAME) AS "Employee Name", 
+    e.SALARY AS "Salary", d.DeptName AS "Department Name", 
+    CONCAT(m.FIRST_NAME, ' ', m.LAST_NAME) AS "Manager", 
+    g.GenderName AS "Gender Name",   u.UnivName AS "Employee University"
+FROM MyEmployee e 
+INNER JOIN MyDepartment d ON e.DEPT_ID = d.Dept_ID 
+INNER JOIN Gender g ON e.Gender_ID = g.Gender_ID 
+INNER JOIN University u ON e.University_ID = u.ID 
+LEFT JOIN MyEmployee m ON e.MANAGER_USERID = m.USERID;
 
 SELECT j.JobName, SUM(e.SALARY) AS Total_Payroll
 FROM MyEmployee e
@@ -45,3 +44,24 @@ JOIN JobTitles j ON e.Job_ID = j.Job_ID
 WHERE j.JobName <> 'Sales'
 GROUP BY j.JobName
 HAVING SUM(e.SALARY) > 2500;
+
+---SQL (Q6):
+-- Create the destination table with the same schema as the source
+CREATE TABLE MyEmployee_update AS SELECT * FROM MyEmployee WHERE 1=0;
+
+-- Define the P_COPY_EMPLOYEE procedure for automated data migration
+CREATE OR REPLACE PROCEDURE P_COPY_EMPLOYEE IS
+BEGIN
+    EXECUTE IMMEDIATE 'TRUNCATE TABLE MyEmployee_update';
+    INSERT INTO MyEmployee_update 
+    SELECT * FROM MyEmployee;
+    COMMIT;
+END;
+/
+  -- Execute the procedure within a PL/SQL anonymous block
+BEGIN
+    P_COPY_EMPLOYEE;
+END;
+/
+  -- Verify that the data has been successfully copied
+SELECT * FROM MyEmployee_update;
