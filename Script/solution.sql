@@ -29,11 +29,11 @@ INSERT INTO University  VALUES (1, 'JU'), (2, 'JUST'), (3, ' PSUT');
 INSERT INTO MyDepartment VALUES (1, 'Software Development'), (2, 'Human Resources');
 INSERT INTO JobTitles VALUES (1, 'Developer'), (2, 'Sales'), (3, 'HR'); (4,'Manager');
 
-INSERT INTO MyEmployee VALUES (990011, 'Ahmad', 'Hassan', 100 ,  '2020-01-10', 3000, 1, 1, 4, 2, NULL , NULL);
-INSERT INTO MyEmployee VALUES (990022, 'Layla', 'Omar', 200 , '2019-05-15', 3300, 2, 2,4, 1, NULL , NULL);
-INSERT INTO MyEmployee VALUES (990033, 'Sami', 'Zaid', 101 , '2022-12-18', 2500, 1, 1,3, 3, NULL , 100);
-INSERT INTO MyEmployee VALUES (990044, 'Noor', 'Salem', 201 , '2023-02-08', 1400, 2, 2,3, 1,NULL ,  200);
-INSERT INTO MyEmployee VALUES (1001, 'SCOTT', 'Tiger',500 ,'1987-09-09', 3000, 1, 1, 1,NULL , NULL ,4);
+INSERT INTO MyEmployee VALUES (990011, 'Ahmad', 'Hassan', 100 ,  '2020-01-10', 3000, 1, 1, 2, NULL,NULL , 4);#
+INSERT INTO MyEmployee VALUES (990022, 'Layla', 'Omar', 200 , '2019-05-15', 3300, 2, 2,2, NULL , NULL , 4);#
+INSERT INTO MyEmployee VALUES (990033, 'Sami', 'Zaid', 101 , '2022-12-18', 2500, 1, 1,3, NULL , 100 , 1);#
+INSERT INTO MyEmployee VALUES (990044, 'Noor', 'Salem', 201 , '2023-02-08', 1400, 2, 2,3, NULL , 200 . 2 );#
+INSERT INTO MyEmployee VALUES (1001, 'SCOTT', 'Tiger',500 ,'1987-09-09', 3000, 1, 1, 1,NULL , NULL ,4);#
 INSERT INTO MyEmployee VALUES (1002, 'Ahmad', 'Omar',501 ,'1980-10-10', 2500, 1, 1,2,NULL , 500 ,1);
 INSERT INTO MyEmployee VALUES (1003, 'Rami', 'Sami',502 ,'1986-05-24',2200, 2, 1,3 ,NULL , 500 ,2);
 INSERT INTO MyEmployee VALUES (1004, 'Zaid', 'Hassan',503 ,'2024-01-01',1800, 1, 1,2 ,NULL , 500 ,2);
