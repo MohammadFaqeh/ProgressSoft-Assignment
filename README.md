@@ -26,6 +26,7 @@ The implementation phase began with the establishment of a centralized system mo
 
 **Execution Output:**
 ![System Info Output](Screenshots/output_script.jpg)
+
 ---
 
 ### User and Access Management (Tasks 2 & 3 )
@@ -38,6 +39,7 @@ Following the initial setup, the methodology shifted toward securing the environ
 
 
 ![Users Proof](Screenshots/Root_Password.jpg)
+
 ---
 
 ### Service Installation & Network Security (Task 4 & 5)
@@ -56,6 +58,7 @@ The firewall (UFW) was configured to strictly allow traffic on port **3306** (TC
 * `sudo ufw allow 3306/udp`
 
 ![Firewall](Screenshots/Firewall_Config.jpg)
+
 ---
 
 ### File Transfer Protocols (Task 6)
@@ -97,6 +100,7 @@ The methodology adopted for the database design centered on achieving a high lev
 ![File Transfer on Linux](Screenshots/MyEmployee.PNG)
 ![File Transfer on Linux](Screenshots/Gender.PNG)
 ![File Transfer on Linux](Screenshots/DepartmentUniversity.PNG)
+
 ---
 
 ### Data Retrieval (Q2) 
@@ -128,6 +132,7 @@ The final step involved implementing a query to calculate the total monthly payr
 
 * Corrected Query:
 `SELECT empno, ename, salary * 12 AS "ANNUAL SALARY" FROM emp;`
+
 ---
 
 ### Procedural Logic and Function Implementation (Q5)
@@ -143,3 +148,7 @@ This task of the project involved implementing a robust data migration strategy 
 The implementation logic follows a strict transactional sequence: first, the destination table is cleared to prevent data duplication; second, a bulk data transfer is performed to maintain structural parity; and finally, a commit operation ensures data persistence. This procedural approach demonstrates an advanced understanding of database automation and the ability to encapsulate complex maintenance tasks into reusable database objects.
 
 ![File Transfer on Linux](Screenshots/CopyTable.PNG)
+
+---
+
+## 3.Web Server Management (Tomcat)
