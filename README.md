@@ -131,3 +131,6 @@ The final step involved implementing a query to calculate the total monthly payr
 ---
 
 ### Procedural Logic and Function Implementation (Q5)
+This task required a comparative analysis of employee seniority based on a specific reference point: the `hire date` of an employee named `SCOTT`. To ensure the solution remains dynamic, I implemented a Subquery within the WHERE clause. This methodology allows the system to first isolate SCOTT's hire date as a variable baseline and then filter the remaining records for any employee hired after that specific date. This approach eliminates the risk of hard-coding errors and demonstrates an advanced understanding of relational logic and relative data filtering.
+
+![File Transfer on Linux](Screenshots/AfterSCOTT.PNG)
