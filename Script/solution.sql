@@ -21,3 +21,11 @@ INNER JOIN MyDepartment d ON e.DEPT_ID = d.Dept_ID
 INNER JOIN Gender g ON e.Gender_ID = g.Gender_ID 
 INNER JOIN University u ON e.University_ID = u.ID 
 LEFT JOIN MyEmployee m ON e.MANAGER_USERID = m.USERID;
+
+INSERT INTO Gender  VALUES (1, 'Male'), (2, 'Female');
+INSERT INTO University  VALUES (1, 'JU'), (2, 'JUST'), (3, ' PSUT');
+INSERT INTO MyDepartment VALUES (1, 'Software Development'), (2, 'Human Resources');
+INSERT INTO MyEmployee VALUES (990011, 'Ahmad', 'Hassan', 100 ,  '2020-01-10', 3000, 1, 1, 2, NULL , NULL);
+INSERT INTO MyEmployee VALUES (990022, 'Layla', 'Omar', 200 , '2019-05-15', 3300, 2, 2, 1, NULL , NULL);
+INSERT INTO VALUES (990033, 'Sami', 'Zaid', 101 , '2022-12-18', 1000, 1, 1, 3, NULL , 100);
+INSERT INTO MyEmployee VALUES (990044, 'Noor', 'Salem', 201 , '2023-02-08', 1400, 2, 2, 1,NULL ,  200);
