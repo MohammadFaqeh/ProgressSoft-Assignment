@@ -77,7 +77,7 @@ Before executing the schema scripts, I accessed the MySQL environment and prepar
 * Creating the Project Database: Initialized a dedicated schema for the assignment.
   `CREATE DATABASE progressSoft_ DB;`
 * Selecting the Database: Switched the context to the newly created database.
-  `USE progressSoft_ DB;`
+  `USE progressSoft_DB;`
 
 ### Database Schema Design Methodology (Q1)
 
