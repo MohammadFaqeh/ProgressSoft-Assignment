@@ -107,3 +107,11 @@ For the organizational hierarchy, I implemented a `Self-Join` by linking the tab
 ---
 
 ### Data Manipulation and Maintenance (Q3)
+
+In this task, the methodology focused on enhancing the database schema to support specific reporting requirements. To achieve this, I created a new table named `JobTitles` to store professional designations separately, ensuring the design follows normalization principles. Following the table creation, I linked it to the `MyEmployee` table by adding a `Job_ID` column as a Foreign Key. This relationship allowed me to assign a specific job role to each employee.
+
+The final step involved implementing a query to calculate the total monthly payroll per job title. The logic was designed to exclude "Sales" employees using a WHERE clause and then group the remaining data. By applying a HAVING clause, the system successfully filtered the results to only display job titles where the total salary expenditure exceeds $2500, ensuring accurate and meaningful data retrieval.
+
+![File Transfer on Linux](Screenshots/select.PNG)
+
+![File Transfer on Linux](Screenshots/jobname.PNG)
