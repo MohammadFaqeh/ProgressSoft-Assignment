@@ -137,3 +137,9 @@ This task required a comparative analysis of employee seniority based on a speci
 
 ---
 ### Automated Data Migration & Procedural PL/SQL (Q6)
+
+This task of the project involved implementing a robust data migration strategy using Oracle PL/SQL. The methodology focused on creating a specialized stored procedure, `P_COPY_EMPLOYEE`, designed to automate the synchronization of records between the primary `MyEmployee` table and a secondary `MyEmployee_update` archive.
+
+The implementation logic follows a strict transactional sequence: first, the destination table is cleared to prevent data duplication; second, a bulk data transfer is performed to maintain structural parity; and finally, a commit operation ensures data persistence. This procedural approach demonstrates an advanced understanding of database automation and the ability to encapsulate complex maintenance tasks into reusable database objects.
+
+![File Transfer on Linux](Screenshots/CopyTable.PNG)
