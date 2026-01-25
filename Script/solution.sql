@@ -5,12 +5,14 @@ USE ProgressSoft_DB;
 CREATE TABLE Gender (Gender_ID INT PRIMARY KEY, GenderName VARCHAR(20) NOT NULL);
 CREATE TABLE University ( ID INT PRIMARY KEY,  UnivName VARCHAR(100) NOT NULL);
 CREATE TABLE MyDepartment( Dept_ID INT PRIMARY KEY, DeptName VARCHAR(100) NOT NULL);
-
+CREATE TABLE JobTitles ( Job_ID INT PRIMARY KEY, JobName VARCHAR(50) NOT NULL);
 CREATE TABLE MyEmployee (  ID_Number INT PRIMARY KEY,  USERID INT UNIQUE NOT NULL, FIRST_NAME VARCHAR(100) NOT NULL, 
-  LAST_NAME VARCHAR(100) NOT NULL, HIRE_DATE DATE,  SALARY DECIMAL(10, 2),  DEPT_ID INT, Gender_ID INT,  University_ID INT,EMP_IMAGE BLOB,
+  LAST_NAME VARCHAR(100) NOT NULL, HIRE_DATE DATE,  SALARY DECIMAL(10, 2),  DEPT_ID INT, Gender_ID INT, Job_ID INT , University_ID INT,EMP_IMAGE BLOB,
     FOREIGN KEY (DEPT_ID) REFERENCES MyDepartment(DEPT_ID),
     FOREIGN KEY (Gender_ID) REFERENCES Gender(Gender_ID),
-    FOREIGN KEY (University_ID) REFERENCES University(ID));
+    FOREIGN KEY (University_ID) REFERENCES University(ID)
+    FOREIGN KEY (Job_ID) REFERENCES JobTitles(Job_ID));
+
 SELECT 
     CONCAT(e.FIRST_NAME, '  ', e.LAST_NAME) AS "Employee Name", 
     e.SALARY AS "Salary", d.DeptName AS "Department Name", 
@@ -25,7 +27,16 @@ LEFT JOIN MyEmployee m ON e.MANAGER_USERID = m.USERID;
 INSERT INTO Gender  VALUES (1, 'Male'), (2, 'Female');
 INSERT INTO University  VALUES (1, 'JU'), (2, 'JUST'), (3, ' PSUT');
 INSERT INTO MyDepartment VALUES (1, 'Software Development'), (2, 'Human Resources');
-INSERT INTO MyEmployee VALUES (990011, 'Ahmad', 'Hassan', 100 ,  '2020-01-10', 3000, 1, 1, 2, NULL , NULL);
-INSERT INTO MyEmployee VALUES (990022, 'Layla', 'Omar', 200 , '2019-05-15', 3300, 2, 2, 1, NULL , NULL);
-INSERT INTO VALUES (990033, 'Sami', 'Zaid', 101 , '2022-12-18', 1000, 1, 1, 3, NULL , 100);
-INSERT INTO MyEmployee VALUES (990044, 'Noor', 'Salem', 201 , '2023-02-08', 1400, 2, 2, 1,NULL ,  200);
+INSERT INTO JobTitles VALUES (1, 'Developer'), (2, 'Sales'), (3, 'HR'); (4,'Manager');
+
+INSERT INTO MyEmployee VALUES (990011, 'Ahmad', 'Hassan', 100 ,  '2020-01-10', 3000, 1, 1, 4, 2, NULL , NULL);
+INSERT INTO MyEmployee VALUES (990022, 'Layla', 'Omar', 200 , '2019-05-15', 3300, 2, 2,4, 1, NULL , NULL);
+INSERT INTO MyEmployee VALUES (990033, 'Sami', 'Zaid', 101 , '2022-12-18', 2500, 1, 1,3, 3, NULL , 100);
+INSERT INTO MyEmployee VALUES (990044, 'Noor', 'Salem', 201 , '2023-02-08', 1400, 2, 2,3, 1,NULL ,  200);
+
+SELECT j.JobName, SUM(e.SALARY) AS Total_Payroll
+FROM MyEmployee e
+JOIN JobTitles j ON e.Job_ID = j.Job_ID
+WHERE j.JobName <> 'Sales'
+GROUP BY j.JobName
+HAVING SUM(e.SALARY) > 2500;
