@@ -195,7 +195,9 @@ Automated Provisioning Workflow: Integrated a specialized shell script that exec
 3. Deploy and start Apache Tomcat 9.
 4. Configure the server to listen on port 7070 automatically.
 
+
 * **Source Code:** [Vagrantfile](./Script/Vagrantfile)
+
 
 Note:
 The Vagrantfile was fully developed according to requirements. However, execution was blocked by a `VERR_VMX_NO_VMX` error. This is due to a Nested Virtualization conflict between the Windows 10 host and the Linux environment on this Dell Inspiron 5558. While the hardware supports VT-x, the host OS restricted access, preventing the VM from booting. The Infrastructure as Code (IaC) remains technically valid.
