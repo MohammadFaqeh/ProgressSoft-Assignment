@@ -187,7 +187,7 @@ Technical Specifications defined in the Code:
 - Network Configuration: Implemented a Port Forwarding rule that maps the Host Port 9090 to the Guest Port 7070.
 - Automated Provisioning: Integrated a shell script to automatically install OpenJDK 8 and Apache Tomcat 9, and reconfigure the server port to 7070 upon the first boot.
 
-* **Source Code:** [solution.sql](./Script/Vagrantfile)
+* **Source Code:** [Vagrantfile](./Script/Vagrantfile)
 
 ---
 
