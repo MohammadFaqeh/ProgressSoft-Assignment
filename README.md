@@ -158,7 +158,7 @@ This project demonstrates the deployment and configuration of a Java-based web e
 2. Application Server: A software framework (like Apache Tomcat) that provides an environment to run web applications and manage business logic and database connectivity.
 3. WAR File (Web Application Resource): A compressed file format used to distribute a collection of JavaServer Pages, Servlets, and other resources. Tomcat automatically deploys these files when placed in the `webapps` directory.
 
- Tomcat Configuration (Practice #1 & #2):
+*  Tomcat Configuration (Practice #1 & #2):
 - Installed Apache Tomcat v9.0.98 and successfully initialized the service.
 - Reconfigured the service port from 8080 to 7070 by modifying the <Connector> tag in the `server.xml` file.
 
@@ -184,7 +184,8 @@ Key Benefits:
 
 
 
-Infrastructure as Code (Practice #3):
+* Infrastructure as Code (Practice #3):
+
 Instead of manual environment setup, I implemented an automated deployment strategy using Vagrant to ensure environment parity and "one-click" reproducibility.
 Virtual Resource Allocation: Configured the virtual machine to use 2GB of RAM and the Ubuntu 24.04 LTS box to provide a stable, production-like environment for the Java application.
 Networking & Connectivity: Established a Port Forwarding rule (Host: 9090 → Guest: 7070) to allow external access to the Tomcat service through the host machine's browser.
