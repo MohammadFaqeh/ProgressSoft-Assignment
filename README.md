@@ -163,12 +163,12 @@ This project demonstrates the deployment and configuration of a Java-based web e
 
 ![File Transfer on Linux](Screenshots/tomcat1.PNG)
 
-Practice #1 (Nginx): 
+Practice 1 (Nginx): 
 To provide a professional user experience, a Reverse Proxy was configured using Nginx. The proxy server was set up to listen on the standard HTTP port (80) and internally route all traffic to the Tomcat service running on port 7070. This configuration allows the WebApp to be accessed directly via the server's IP or DNS name without manually specifying a port number in the browser, enhancing both accessibility and security.
 
-![File Transfer on Linux](Screenshots/whithoutport.PNG)
+![File Transfer on Linux](Screenshots/whithout port.PNG)
 
-Practice #2 (Tomcat Port):
+Practice 2 (Tomcat Port):
 To comply with the specific project requirements, I accessed the Tomcat configuration directory via the CLI and modified the server.xml file. The default HTTP connector port was successfully migrated from 8080 to 7070. This task demonstrates the ability to manage server resources and avoid port conflicts by editing the core XML configuration tags. After the modification, the service was restarted to apply the new networking rules.
 
   `cd ../conf`
@@ -179,7 +179,7 @@ To comply with the specific project requirements, I accessed the Tomcat configur
 ![File Transfer on Linux](Screenshots/port8080.PNG)
 ![File Transfer on Linux](Screenshots/port7070.PNG)
 
-Practice #3 (Vagrant):
+Practice 3 (Vagrant):
 This task focuses on automating the entire development environment setup to ensure consistency and speed across different machines. Instead of manual configuration, I have implemented an Infrastructure as Code (IaC) approach using Vagrant and VirtualBox.
 Technical Specifications defined in the Code:
 - Operating System: The environment is built on the bento/ubuntu-24.04 base image as specified in the requirements.
