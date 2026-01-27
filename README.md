@@ -158,36 +158,46 @@ This project demonstrates the deployment and configuration of a Java-based web e
 2. Application Server: A software framework (like Apache Tomcat) that provides an environment to run web applications and manage business logic and database connectivity.
 3. WAR File (Web Application Resource): A compressed file format used to distribute a collection of JavaServer Pages, Servlets, and other resources. Tomcat automatically deploys these files when placed in the `webapps` directory.
 
-* Implementation Details:
- Successful Validation of Apache Tomcat Deployment
-
-![File Transfer on Linux](Screenshots/tomcat1.PNG)
-
-Practice 1 (Nginx): 
-To provide a professional user experience, a Reverse Proxy was configured using Nginx. The proxy server was set up to listen on the standard HTTP port (80) and internally route all traffic to the Tomcat service running on port 7070. This configuration allows the WebApp to be accessed directly via the server's IP or DNS name without manually specifying a port number in the browser, enhancing both accessibility and security.
-
-![File Transfer on Linux](Screenshots/whithoutport.PNG)
-
-Practice 2 (Tomcat Port):
-To comply with the specific project requirements, I accessed the Tomcat configuration directory via the CLI and modified the server.xml file. The default HTTP connector port was successfully migrated from 8080 to 7070. This task demonstrates the ability to manage server resources and avoid port conflicts by editing the core XML configuration tags. After the modification, the service was restarted to apply the new networking rules.
+ Tomcat Configuration (Practice #1 & #2):
+- Installed Apache Tomcat v9.0.98 and successfully initialized the service.
+- Reconfigured the service port from 8080 to 7070 by modifying the <Connector> tag in the `server.xml` file.
 
   `cd ../conf`
 `nano server.xml` 
 `cd ../bin`
 `./startup.sh`
-
+  
+![File Transfer on Linux](Screenshots/tomcat1.PNG)
 ![File Transfer on Linux](Screenshots/port8080.PNG)
 ![File Transfer on Linux](Screenshots/port7070.PNG)
 
-Practice 3 (Vagrant):
-This task focuses on automating the entire development environment setup to ensure consistency and speed across different machines. Instead of manual configuration, I have implemented an Infrastructure as Code (IaC) approach using Vagrant and VirtualBox.
-Technical Specifications defined in the Code:
-- Operating System: The environment is built on the bento/ubuntu-24.04 base image as specified in the requirements.
-- Resource Management: Allocated 2GB (2048MB) of RAM to provide sufficient resources for the Java runtime and Tomcat server.
-- Network Configuration: Implemented a Port Forwarding rule that maps the Host Port 9090 to the Guest Port 7070.
-- Automated Provisioning: Integrated a shell script to automatically install OpenJDK 8 and Apache Tomcat 9, and reconfigure the server port to 7070 upon the first boot.
+
+To provide a seamless and professional user experience, an Nginx Reverse Proxy was configured. This setup routes traffic from the standard HTTP port (80) to the internal Tomcat service running on port 7070.
+
+Key Benefits:
+- Accessibility: Users can access the WebApp via IP/Domain without manually appending :7070.
+- Security: Hides the internal application server details from the public web.
+- Scalability: Simplifies the process of adding SSL (HTTPS) or load balancing in the future.
+
+![File Transfer on Linux](Screenshots/whithoutport.PNG)
+
+
+
+
+Infrastructure as Code (Practice #3):
+Instead of manual environment setup, I implemented an automated deployment strategy using Vagrant to ensure environment parity and "one-click" reproducibility.
+Virtual Resource Allocation: Configured the virtual machine to use 2GB of RAM and the Ubuntu 24.04 LTS box to provide a stable, production-like environment for the Java application.
+Networking & Connectivity: Established a Port Forwarding rule (Host: 9090 → Guest: 7070) to allow external access to the Tomcat service through the host machine's browser.
+Automated Provisioning Workflow: Integrated a specialized shell script that executes upon initialization to:
+1. Update system packages.
+2. Install OpenJDK 8 (as the required Java runtime).
+3. Deploy and start Apache Tomcat 9.
+4. Configure the server to listen on port 7070 automatically.
 
 * **Source Code:** [Vagrantfile](./Script/Vagrantfile)
+
+Note:
+The Vagrantfile was fully developed according to requirements. However, execution was blocked by a `VERR_VMX_NO_VMX` error. This is due to a Nested Virtualization conflict between the Windows 10 host and the Linux environment on this Dell Inspiron 5558. While the hardware supports VT-x, the host OS restricted access, preventing the VM from booting. The Infrastructure as Code (IaC) remains technically valid.
 
 ---
 
