@@ -1,21 +1,23 @@
 Vagrant.configure("2") do |config|
-  # Match the required input image
+  # Using the required Ubuntu 24.04 box
   config.vm.box = "bento/ubuntu-24.04"
 
   # Forward guest port 7070 to host port 9090
   config.vm.network "forwarded_port", guest: 7070, host: 9090
 
-  # Set VM memory to 2GB as required
+  # Set VM memory to 2GB (2048MB)
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "2048"
+    vb.name = "Tomcat-Automation-Server" 
   end
 
-  # Automated installation of required software
+  # Automated provisioning script
   config.vm.provision "shell", inline: <<-SHELL
-    sudo apt-get update
-    sudo apt-get install -y openjdk-8-jdk  # Install Java 8
-    sudo apt-get install -y tomcat9         # Install Tomcat 9
-    # Update Tomcat port to 7070
+    sudo apt-get update -y
+    sudo apt-get install -y openjdk-8-jdk
+    sudo apt-get install -y tomcat9
+    
+    # Update Tomcat port from 8080 to 7070 in server.xml
     sudo sed -i 's/Connector port="8080"/Connector port="7070"/' /etc/tomcat9/server.xml
     sudo systemctl restart tomcat9
   SHELL
