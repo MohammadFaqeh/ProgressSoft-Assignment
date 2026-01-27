@@ -166,7 +166,7 @@ This project demonstrates the deployment and configuration of a Java-based web e
 Practice 1 (Nginx): 
 To provide a professional user experience, a Reverse Proxy was configured using Nginx. The proxy server was set up to listen on the standard HTTP port (80) and internally route all traffic to the Tomcat service running on port 7070. This configuration allows the WebApp to be accessed directly via the server's IP or DNS name without manually specifying a port number in the browser, enhancing both accessibility and security.
 
-![File Transfer on Linux](Screenshots/whithout port.PNG)
+![File Transfer on Linux](Screenshots/whithoutport.PNG)
 
 Practice 2 (Tomcat Port):
 To comply with the specific project requirements, I accessed the Tomcat configuration directory via the CLI and modified the server.xml file. The default HTTP connector port was successfully migrated from 8080 to 7070. This task demonstrates the ability to manage server resources and avoid port conflicts by editing the core XML configuration tags. After the modification, the service was restarted to apply the new networking rules.
