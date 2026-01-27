@@ -13,7 +13,7 @@ This project focuses on the implementation and management of essential IT tools 
 - Operating System: Ubuntu 22.04.3 LTS .
 - Kernel Version: 5.15.0-116-generic.
 - Architecture: x86_64.
-- Hardware Allocation: 2GB RAM and 1 CPU Core.
+- Hardware Allocation: 4GB RAM and 2 CPU Core.
 
  ## Project Sections:
 
