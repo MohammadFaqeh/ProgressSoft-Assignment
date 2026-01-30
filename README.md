@@ -224,10 +224,16 @@ Nginx Web Server: Deployed to act as the entry point, mapped to Port 8081 to ens
 PostgreSQL Database: Deployed as an isolated database service with secure environment configurations.
 
 ![File Transfer on Linux](Screenshots/NgPo.PNG)
+
 Step 3: Infrastructure Verification
 The final phase was to verify that the entire infrastructure is healthy and communicating correctly:
 
 Active Status: Checked that all containers are running in the background without issues.
 
 Port Mapping: Verified that the host machine is correctly forwarding traffic to the containers (e.g., Port 8081 for Nginx and Port 5432 for Postgres).
+
 ![File Transfer on Linux](Screenshots/dockps.PNG)
+
+Kubernetes:
+
+
