@@ -235,5 +235,35 @@ Port Mapping: Verified that the host machine is correctly forwarding traffic to 
 ![File Transfer on Linux](Screenshots/dockps.PNG)
 
 Kubernetes:
+1. Kubernetes is an open-source Container Orchestration platform designed to automate the deployment, scaling, and management of containerized applications. While Docker is used to create containers, Kubernetes is used to manage clusters of those containers at scale.
 
+2. Master vs. Worker Nodes:
 
+  - Responsibilities are divided to ensure stability and efficiency:
+   1. **Master Node:** Its main purpose is to manage the entire cluster. It makes global decisions (like scheduling) and detects/responds to cluster events (like starting a new pod when one fails).
+
+   2. **Worker Node:** Its purpose is to host the Pods (containers) and perform the actual work. It runs the applications and reports back to the Master.
+   
+  - Cluster Status: Verified the node (`postgres02`) is **Ready**, acting as both Master and Worker to manage the control plane and workloads.
+
+		`microk8s kubectl get nodes`
+
+![File Transfer on Linux](Screenshots/verify.PNG)
+
+3. Environment: Installed and configured **MicroK8s** on Ubuntu.
+	`sudo snap install microk8s --classic`
+	
+  - Deployment: Successfully deployed a sample Nginx application. The Pod is verified as **Running**, proving the cluster's ability to pull images and manage lifecycle.
+
+![File Transfer on Linux](Screenshots/created.PNG)
+![File Transfer on Linux](Screenshots/running.PNG)
+
+Scalability Check: Verified that Kubernetes can manage the pod lifecycle, ensuring the application is active and ready to handle traffic.
+
+Exposing the Service:
+
+![File Transfer on Linux](Screenshots/port.PNG)
+
+Service Exposure: The Nginx deployment was exposed as a service, and I verified its accessibility via the browser at `localhost:32729` . The **Welcome to nginx!** page confirms a successful end-to-end orchestration.
+
+![File Transfer on Linux](Screenshots/nginx.PNG)
