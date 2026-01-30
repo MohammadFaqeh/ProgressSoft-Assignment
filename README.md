@@ -206,3 +206,28 @@ The Vagrantfile was fully developed according to requirements. However, executio
 
 
 ## 4. DevOps & Infrastructure (Docker, K8s, Vagrant)
+**Docker:**
+Step 1: Building the Application Image
+The first phase was to create a specialized environment for the Java application. Using a Dockerfile, I built a custom image based on `tomcat:9.0-jdk8-openjdk` .
+
+Automation: The build process automatically handles the deployment by copying the sample.war file into the Tomcat webapps directory.
+
+Success: The image was successfully generated and tagged as `my-tomcat-app:latest` .
+
+![File Transfer on Linux](Screenshots/successBuild.PNG)
+
+Step 2: Microservices Deployment
+After building the application image, I moved to deploying the supporting services using the Docker CLI to ensure a scalable architecture:
+
+Nginx Web Server: Deployed to act as the entry point, mapped to Port 8081 to ensure smooth accessibility.
+
+PostgreSQL Database: Deployed as an isolated database service with secure environment configurations.
+
+![File Transfer on Linux](Screenshots/NgPo.PNG)
+Step 3: Infrastructure Verification
+The final phase was to verify that the entire infrastructure is healthy and communicating correctly:
+
+Active Status: Checked that all containers are running in the background without issues.
+
+Port Mapping: Verified that the host machine is correctly forwarding traffic to the containers (e.g., Port 8081 for Nginx and Port 5432 for Postgres).
+![File Transfer on Linux](Screenshots/dockps.PNG)
