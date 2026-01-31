@@ -85,9 +85,10 @@ Before executing the schema scripts, I accessed the MySQL environment and prepar
 * Accessing the MySQL CLI: Used the terminal to log in as the root user.
 `sudo mysql -u root -p`
 * Creating the Project Database: Initialized a dedicated schema for the assignment.
-  `CREATE DATABASE progressSoft_ DB;`
+  `CREATE DATABASE ProgressSoft_ DB;`
 * Selecting the Database: Switched the context to the newly created database.
-  `USE progressSoft_DB;`
+  `USE ProgressSoft_DB;`
+  
 
 ### Database Schema Design Methodology (Q1)
 
