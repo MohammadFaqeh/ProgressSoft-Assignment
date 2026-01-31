@@ -1,4 +1,4 @@
-# ProgressSoft Internship Assignment
+# ProgressSoft Assignment
 ## Introduction
 This project focuses on the implementation and management of essential IT tools and technologies required for modern application deployment. The goal is to demonstrate a foundational understanding and practical experience in the following areas:
 - Operating Systems: Linux administration and shell scripting.
