@@ -46,7 +46,7 @@ Following the initial setup, the methodology shifted toward securing the environ
 The next stage of the deployment focused on preparing the server for production-ready services. This involved the orchestrated installation of `mysql-server` for data management and `haproxy` for load balancing capabilities. To protect these services, a "Deny-by-Default" firewall policy was implemented using UFW. The methodology here was to minimize the server's attack surface by explicitly filtering all traffic and only permitting ingress communication on port `3306`, ensuring that database services are accessible only through secured and intended channels.
 To install the required database engine and load balancer, the following commands were executed:
 * `sudo apt update` 
-*  `sudo apt install mysql-server -y`  
+*  `sudo apt install mysql-server -y` 
 * `sudo apt install haproxy -y`
 
 ![Install_Services](Screenshots/Install_mySql.jpg)
@@ -131,6 +131,7 @@ The final step involved implementing a query to calculate the total monthly payr
 4. Quotation Marks for Alias: The alias ANNUAL SALARY should be enclosed in `double quotes (")` since it contains a space.
 
 * Corrected Query:
+
 `SELECT empno, ename, salary * 12 AS "ANNUAL SALARY" FROM emp;`
 
 ---
@@ -162,10 +163,10 @@ This project demonstrates the deployment and configuration of a Java-based web e
 - Installed Apache Tomcat v9.0.98 and successfully initialized the service.
 - Reconfigured the service port from 8080 to 7070 by modifying the <Connector> tag in the `server.xml` file.
 
-  `cd ../conf`
-`nano server.xml` 
-`cd ../bin`
-`./startup.sh`
+- `cd ../conf` 
+- `nano server.xml` 
+- `cd ../bin`
+- `./startup.sh` 
   
 ![File Transfer on Linux](Screenshots/tomcat1.PNG)
 ![File Transfer on Linux](Screenshots/port8080.PNG)
@@ -234,7 +235,7 @@ Port Mapping: Verified that the host machine is correctly forwarding traffic to 
 
 ![File Transfer on Linux](Screenshots/dockps.PNG)
 
-Kubernetes:
+**Kubernetes:**
 1. Kubernetes is an open-source Container Orchestration platform designed to automate the deployment, scaling, and management of containerized applications. While Docker is used to create containers, Kubernetes is used to manage clusters of those containers at scale.
 
 2. Master vs. Worker Nodes:
