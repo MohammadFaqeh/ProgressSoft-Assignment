@@ -220,6 +220,7 @@ The Vagrantfile was fully developed according to requirements. However, executio
 
 ## 4. DevOps & Infrastructure (Docker, K8s, Vagrant)
 **Docker:**
+
 Step 1: Building the Application Image
 The first phase was to create a specialized environment for the Java application. Using a Dockerfile, I built a custom image based on `tomcat:9.0-jdk8-openjdk` .
 
