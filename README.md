@@ -47,17 +47,22 @@ Following the initial setup, the methodology shifted toward securing the environ
 ### Service Installation & Network Security (Task 4 & 5)
 The next stage of the deployment focused on preparing the server for production-ready services. This involved the orchestrated installation of `mysql-server` for data management and `haproxy` for load balancing capabilities. To protect these services, a "Deny-by-Default" firewall policy was implemented using UFW. The methodology here was to minimize the server's attack surface by explicitly filtering all traffic and only permitting ingress communication on port `3306`, ensuring that database services are accessible only through secured and intended channels.
 To install the required database engine and load balancer, the following commands were executed:
-* `sudo apt update` 
-*  `sudo apt install mysql-server -y` 
-* `sudo apt install haproxy -y`
+
+> `sudo apt update` 
+
+>  `sudo apt install mysql-server -y` 
+
+> `sudo apt install haproxy -y`
 
 ![Install_Services](Screenshots/Install_mySql.jpg)
 ![Install_Services](Screenshots/Install_haproxy.jpg)
 
 **Network Security:**
 The firewall (UFW) was configured to strictly allow traffic on port **3306** (TCP/UDP) as per the assignment requirements.
-* `sudo ufw allow 3306/tcp`
-* `sudo ufw allow 3306/udp`
+
+> `sudo ufw allow 3306/tcp`
+
+> `sudo ufw allow 3306/udp`
 
 ![Firewall](Screenshots/Firewall_Config.jpg)
 
@@ -86,17 +91,18 @@ Before executing the schema scripts, I accessed the MySQL environment and prepar
 
 ### Database Schema Design Methodology (Q1)
 
-To automate the environment setup, a comprehensive script named `solution.sql` has been provided. This script sequentially handles database creation, schema definition, data population, and the generation of the final analytical report. It can be executed via the Linux terminal using the following command: `mysql -u root -p < solution.sql`
+To automate the environment setup, a comprehensive script named `solution.sql` has been provided. This script sequentially handles database creation, schema definition, data population, and the generation of the final analytical report. It can be executed via the Linux terminal using the following command: 
+> `mysql -u root -p < solution.sql`
 
 * **Source Code:** [solution.sql](./Script/solution.sql)
 
 The methodology adopted for the database design centered on achieving a high level of Data Normalization while maintaining strict Referential Integrity. To minimize data redundancy, the architecture was decomposed into four interconnected entities: `MyEmployee, MyDepartment, University, and Gender`. The design process involved careful selection of data types to ensure system precision; for instance, the `SALARY` field utilizes `DECIMAL(10, 2)` for financial accuracy, while the `EMP_IMAGE` field was implemented using the `BLOB` (Binary Large Object) type to allow the direct storage of employee portraits as binary data within the database. A unique aspect of this methodology is the implementation of a `Self-Referencing Relationship` via the `MANAGER_USERID` column. This design choice allows the system to represent the organizational hierarchy within a single table by linking an employee’s record to their manager’s `USERID`, thereby ensuring that the reporting structure is maintained through a robust foreign key constraint.
 
-`show tables;`
+> `show tables;`
 
 ![File Transfer on Linux](Screenshots/Tables.PNG)
 
-`describe (TableName);`
+> `describe (TableName);`
 
 
 ![File Transfer on Linux](Screenshots/MyEmployee.PNG)
@@ -134,7 +140,7 @@ The final step involved implementing a query to calculate the total monthly payr
 
 * Corrected Query:
 
-`SELECT empno, ename, salary * 12 AS "ANNUAL SALARY" FROM emp;`
+> `SELECT empno, ename, salary * 12 AS "ANNUAL SALARY" FROM emp;`
 
 ---
 
@@ -167,8 +173,11 @@ This project demonstrates the deployment and configuration of a Java-based web e
 - Reconfigured the service port from 8080 to 7070 by modifying the <Connector> tag in the `server.xml` file.
 
 > `cd ../conf` 
+
 >`nano server.xml` 
+
 >`cd ../bin`
+
 >`./startup.sh` 
   
 ![File Transfer on Linux](Screenshots/tomcat1.PNG)
@@ -255,7 +264,8 @@ Port Mapping: Verified that the host machine is correctly forwarding traffic to 
 ![File Transfer on Linux](Screenshots/verify.PNG)
 
 3. Environment: Installed and configured **MicroK8s** on Ubuntu.
-	`sudo snap install microk8s --classic`
+
+> `sudo snap install microk8s --classic`
 	
   - Deployment: Successfully deployed a sample Nginx application. The Pod is verified as **Running**, proving the cluster's ability to pull images and manage lifecycle.
 
