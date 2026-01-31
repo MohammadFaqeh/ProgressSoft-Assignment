@@ -22,7 +22,7 @@ INSERT INTO JobTitles VALUES (2, 'Sales');
 INSERT INTO JobTitles VALUES (3, 'HR');
 INSERT INTO JobTitles VALUES(4,'Manager');
 
-TO_DATE('2024-01-01','YYYY-MM-DD')
+
 INSERT INTO MyEmployee VALUES (990011, 'Ahmad', 'Hassan', 100 ,  TO_DATE('2020-01-10','YYYY-MM-DD'), 3000, 1, 1, 2, NULL,NULL , 4);
 INSERT INTO MyEmployee VALUES (990022, 'Layla', 'Omar', 200 , TO_DATE('2019-05-15','YYYY-MM-DD'), 3300, 2, 2,2, NULL , NULL , 4);
 INSERT INTO MyEmployee VALUES (990033, 'Sami', 'Zaid', 101 , TO_DATE('2022-12-18','YYYY-MM-DD'), 2500, 1, 1,3, NULL , 100 , 1);
