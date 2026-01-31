@@ -144,6 +144,7 @@ This task required a comparative analysis of employee seniority based on a speci
 ![File Transfer on Linux](Screenshots/SCOTT.PNG)
 
 ---
+
 ### Automated Data Migration & Procedural PL/SQL (Q6)
 
 This task of the project involved implementing a robust data migration strategy using Oracle PL/SQL. The methodology focused on creating a specialized stored procedure, `P_COPY_EMPLOYEE`, designed to automate the synchronization of records between the primary `MyEmployee` table and a secondary `MyEmployee_update` archive.
@@ -165,10 +166,10 @@ This project demonstrates the deployment and configuration of a Java-based web e
 - Installed Apache Tomcat v9.0.98 and successfully initialized the service.
 - Reconfigured the service port from 8080 to 7070 by modifying the <Connector> tag in the `server.xml` file.
 
-- `cd ../conf` 
-- `nano server.xml` 
-- `cd ../bin`
-- `./startup.sh` 
+> `cd ../conf` 
+>`nano server.xml` 
+>`cd ../bin`
+>`./startup.sh` 
   
 ![File Transfer on Linux](Screenshots/tomcat1.PNG)
 ![File Transfer on Linux](Screenshots/port8080.PNG)
